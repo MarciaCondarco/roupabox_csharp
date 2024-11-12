@@ -10,6 +10,11 @@ namespace roupabox
     {
         static void Main(string[] args)
         {
+            cabecalho variavelcabecalho = new cabecalho();
+            variavelcabecalho.CabecalhoRoupaBox();
+
+            menu variavelmenu = new menu();
+            variavelmenu.MenuRoupaBox();
         }
     }
 }
