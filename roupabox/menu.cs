@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace roupabox
@@ -16,7 +17,35 @@ namespace roupabox
             Console.WriteLine("Digite 3 Cadastro de Produtos");
             Console.WriteLine("Digite 4 Listar Produto\n");
             Console.WriteLine("Digite a opção escolhida");
-            Console.ReadLine();
+            int NumeroEscolhido = int.Parse (Console.ReadLine());
+
+            Thread.Sleep(2000);
+            Console.Clear();
+
+            switch(NumeroEscolhido)
+            {
+                case 0:
+                    Thread.Sleep(3000);
+                    break;
+                case 1:
+                    cadastrocliente variavelcadastrocliente = new cadastrocliente();
+                    variavelcadastrocliente.CadastroClienteRoupaBox();
+                    break;
+                case 2:
+                    listarclientes variavellistarclientes = new listarclientes();
+                    variavellistarclientes.ListarClientesRoupaBox();
+                    break;
+                case 3:
+                    cadastroprodutos variavelcadastroproduto = new cadastroprodutos();
+                    variavelcadastroproduto.CadastroProdutosRoupaBox();
+                    break;
+                case 4:
+                    listarprodutos variavellistarprodutos = new listarprodutos();
+                    variavellistarprodutos.ListarProdutosRoupaBox();
+                    break;
+
+            }
+
         }
     }
 }

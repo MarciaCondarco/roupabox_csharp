@@ -12,11 +12,11 @@ namespace roupabox
         public void CabecalhoRoupaBox ()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(@"══════════════════════════");
+            Console.WriteLine(@"═════════════════════════════════════");
             Console.ForegroundColor= ConsoleColor.Green;
             Console.WriteLine("Autor: Marcia Condarco");
             Console.ForegroundColor= ConsoleColor.Red;
-            Console.WriteLine(@"══════════════════════════");
+            Console.WriteLine(@"═════════════════════════════════════");
             Console.ForegroundColor= ConsoleColor.Blue;
             Console.WriteLine(@"
 ██████╗░░█████╗░██╗░░░██╗██████╗░░█████╗░██████╗░░█████╗░██╗░░██╗
@@ -26,7 +26,7 @@ namespace roupabox
 ██║░░██║╚█████╔╝╚██████╔╝██║░░░░░██║░░██║██████╦╝╚█████╔╝██╔╝╚██╗
 ╚═╝░░╚═╝░╚════╝░░╚═════╝░╚═╝░░░░░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝");
             Console.ForegroundColor= ConsoleColor.Red;
-            Console.WriteLine(@"══════════════════════════");
+            Console.WriteLine(@"═════════════════════════════════════");
             Console.ForegroundColor= ConsoleColor.White;
 
             Thread.Sleep(3000);

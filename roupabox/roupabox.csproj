@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cabecalho.cs" />
+    <Compile Include="cadastrocliente.cs" />
+    <Compile Include="cadastroprodutos.cs" />
+    <Compile Include="listarclientes.cs" />
+    <Compile Include="listarprodutos.cs" />
     <Compile Include="menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
