@@ -26,7 +26,10 @@ namespace roupabox
 
             Console.WriteLine("\nDigite o telefone do Cliente:  ");
             long telCli = long.Parse(Console.ReadLine());
-            while (telCli.lenght != 11 || !)
+            while (telCli.lenght != 11 || !telCli.All(char.IsDigit))
+            {
+                Console.WriteLine("");
+            }
 
             Console.WriteLine("\n Digite a sua idade:  ");
             int idadeCli = int.Parse(Console.ReadLine());
