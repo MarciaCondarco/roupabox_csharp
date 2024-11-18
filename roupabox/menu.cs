@@ -21,30 +21,43 @@ namespace roupabox
 
             Thread.Sleep(2000);
             Console.Clear();
-
-            switch(NumeroEscolhido)
+            if(NumeroEscolhido != 1 && NumeroEscolhido != 2 && NumeroEscolhido != 3 && NumeroEscolhido != 4)
             {
-                case 0:
-                    Thread.Sleep(3000);
-                    break;
-                case 1:
-                    cadastrocliente variavelcadastrocliente = new cadastrocliente();
-                    variavelcadastrocliente.CadastroClienteRoupaBox();
-                    break;
-                case 2:
-                    listarclientes variavellistarclientes = new listarclientes();
-                    variavellistarclientes.ListarClientesRoupaBox();
-                    break;
-                case 3:
-                    cadastroprodutos variavelcadastroproduto = new cadastroprodutos();
-                    variavelcadastroproduto.CadastroProdutosRoupaBox();
-                    break;
-                case 4:
-                    listarprodutos variavellistarprodutos = new listarprodutos();
-                    variavellistarprodutos.ListarProdutosRoupaBox();
-                    break;
+                Console.WriteLine("\n\nDigite o numero certo ¯\\_(°.°)_/¯ \n\n");
+                Thread.Sleep(1000);
+                Console.Clear();
 
+                menu variavelmenu = new menu();
+                variavelmenu.MenuRoupaBox();
             }
+            else
+            {
+                switch (NumeroEscolhido)
+                {
+                    case 0:
+                        Console.WriteLine(@"𝚜𝚊𝚒𝚗𝚍𝚘");
+                        Thread.Sleep(1000);
+                        break;
+                    case 1:
+                        clientes varCli = new clientes();
+                        varCli.cadCliente();
+                        break;
+                    case 2:
+                        listarclientes variavellistarclientes = new listarclientes();
+                        variavellistarclientes.ListarClientesRoupaBox();
+                        break;
+                    case 3:
+                        cadastroprodutos variavelcadastroproduto = new cadastroprodutos();
+                        variavelcadastroproduto.CadastroProdutosRoupaBox();
+                        break;
+                    case 4:
+                        listarprodutos variavellistarprodutos = new listarprodutos();
+                        variavellistarprodutos.ListarProdutosRoupaBox();
+                        break;
+
+                }
+            }
+            
 
         }
     }

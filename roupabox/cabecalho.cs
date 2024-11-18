@@ -32,9 +32,6 @@ namespace roupabox
             Thread.Sleep(3000);
             Console.Clear();
 
-            menu variavelmenu = new menu();
-            variavelmenu.MenuRoupaBox();
-
         }
     }
 }
