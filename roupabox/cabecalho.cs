@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace roupabox
 {
-    internal class cabecalho
+    internal class Cabecalho
     {
         public void CabecalhoRoupaBox ()
         {

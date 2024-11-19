@@ -10,11 +10,15 @@ namespace roupabox
     {
         static void Main(string[] args)
         {
-            cabecalho variavelcabecalho = new cabecalho();
+            Cabecalho variavelcabecalho = new Cabecalho();
             variavelcabecalho.CabecalhoRoupaBox();
 
-            menu variavelmenu = new menu();
-            variavelmenu.MenuRoupaBox();
+            Produtos varPro = new Produtos();
+            Clientes varCli = new Clientes();
+
+            ExibirMenu variavelMenu = new ExibirMenu();
+            variavelMenu.Menu(varPro);
+            //PARA pegar a referencia e criar a variavel do varPro
         }
     }
 }

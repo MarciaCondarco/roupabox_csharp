@@ -43,12 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cabecalho.cs" />
-    <Compile Include="cadastroprodutos.cs" />
-    <Compile Include="clientes.cs" />
-    <Compile Include="listarclientes.cs" />
-    <Compile Include="listarprodutos.cs" />
-    <Compile Include="menu.cs" />
+    <Compile Include="Cabecalho.cs" />
+    <Compile Include="ClienteCad.cs" />
+    <Compile Include="Produtos.cs" />
+    <Compile Include="Clientes.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="ProdutoCad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
