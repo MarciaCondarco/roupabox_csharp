@@ -29,8 +29,7 @@ namespace roupabox
             Console.WriteLine(@"═════════════════════════════════════");
             Console.ForegroundColor= ConsoleColor.White;
 
-            Thread.Sleep(3000);
-            Console.Clear();
+         
 
         }
     }

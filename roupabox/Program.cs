@@ -17,7 +17,7 @@ namespace roupabox
             Clientes varCli = new Clientes();
 
             ExibirMenu variavelMenu = new ExibirMenu();
-            variavelMenu.Menu(varPro);
+            variavelMenu.Menu(varPro , varCli);
             //PARA pegar a referencia e criar a variavel do varPro
         }
     }

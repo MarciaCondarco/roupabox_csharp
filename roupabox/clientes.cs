@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,17 +18,27 @@ namespace roupabox
             Console.WriteLine("\n Digite o Nome Completo do Cliente:  ");
             string nomeCli = Console.ReadLine();
             var Cliente = new ClienteCad(nomeCli);
-
+            while (string.IsNullOrEmpty(nomeCli))
+            {
+                Console.WriteLine("você não escreveu nada!!!!!!! escreva seu nome ಠ_ಠ");
+            }
             // nome da variavel para armazenar o nome 
             Console.Clear();
             Console.WriteLine("\n Digite o CPF do cliente:  (com apenas 11 caracteres)");
             string cpfCli = Console.ReadLine();
-            Cliente.cpfCli = cpfCli;
-            while (cpfCli.Length != 11 || !cpfCli.All(char.IsDigit))//todos os caracteres tem que ser numeros - all(char.isdigit)
+
+            //while (cpfCli.Length != 11 || !cpfCli.All(char.IsDigit))//todos os caracteres tem que ser numeros - all(char.isdigit)
+            //{
+            //    Console.WriteLine("cpf invalido, faz de novo");
+            //    cpfCli = Console.ReadLine();
+            //}
+            while (string.IsNullOrEmpty(cpfCli) || cpfCli.Length != 11 || !cpfCli.All(char.IsDigit))
             {
-                Console.WriteLine("cpf invalido, faz de novo");
+                Console.WriteLine("Escreva o seu cpf    ಥ_ಥ");
                 cpfCli = Console.ReadLine();
+             
             }
+            Cliente.cpfCli = cpfCli;
 
             Console.WriteLine("\nDigite o telefone do Cliente:  ");
             string telCli = Console.ReadLine();
@@ -53,6 +65,8 @@ namespace roupabox
             Console.WriteLine("\ndigite seu sexo");
             string sexoCli = Console.ReadLine();
             Cliente.sexoCli = sexoCli;
+
+
 
             Console.WriteLine("\n Digite a rua");
             string ruaCli = Console.ReadLine();
@@ -85,14 +99,15 @@ namespace roupabox
             listaClientes.Add(Cliente);
 
             Console.WriteLine("\n Cliente cadastrado com sucesso");
-            Console.WriteLine("\n Digite uma tecla para voltar ao menu principal ");
-            Console.ReadKey();
-            ///o readkey quando não clicar nada vai ficar naquela tecla 
-            Console.Clear();
             foreach (var Clientes in listaClientes)
             {
                 Console.WriteLine($"Nome: {Cliente.nomeCli}, " + $"cpf: {Cliente.cpfCli}");
             }
+            Console.WriteLine("\n Digite uma tecla para voltar ao menu principal ");
+            Console.ReadKey();
+            ///o readkey quando não clicar nada vai ficar naquela tecla 
+            Console.Clear();
+
 
             Cabecalho variavelcabecalho = new Cabecalho();
             variavelcabecalho.CabecalhoRoupaBox();

@@ -26,16 +26,16 @@ namespace roupabox
                 Console.WriteLine("Digite a opção escolhida");
                 int NumeroEscolhido = int.Parse(Console.ReadLine());
 
-                Thread.Sleep(2000);
-                Console.Clear();
+               
+              
                 if (NumeroEscolhido != 1 && NumeroEscolhido != 2 && NumeroEscolhido != 3 && NumeroEscolhido != 4)
                 {
                     Console.WriteLine("\n\nDigite o numero certo ¯\\_(°.°)_/¯ \n\n");
-                    Thread.Sleep(1000);
-                    Console.Clear();
+               
+                
 
-                    ExibirMenu variavelmenu = new ExibirMenu();
-                    variavelmenu.Menu(varPro);
+                    //ExibirMenu variavelmenu = new ExibirMenu();
+                    //variavelmenu.Menu(varPro);
                 }
                 else
                 {
@@ -43,7 +43,7 @@ namespace roupabox
                     {
                         case 0:
                             Console.WriteLine(@"𝚜𝚊𝚒𝚗𝚍𝚘");
-                            Thread.Sleep(1000);
+                            
                             break;
                         case 1:
 
