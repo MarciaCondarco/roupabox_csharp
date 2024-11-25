@@ -52,10 +52,6 @@ namespace roupabox
 
             Console.WriteLine("produto cadastrdo");
             //faça enquanto - foreach
-            foreach (var produto in listaProdutos)
-            {
-                Console.WriteLine($"Descrição: {produto.descPro}, " + $"Valor: {produto.valPro}");
-            }
 
             Console.WriteLine("digite um coisa");
             Console.ReadKey();
@@ -69,5 +65,28 @@ namespace roupabox
 
             return Produto;
         }
+
+        public void listarProduto()
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de Produtos Cadastrados");
+
+            foreach (var produto in listaProdutos)
+            {
+                Console.WriteLine($"Descrição: {produto.descPro}, " + $"Valor: {produto.valPro}" + $"Peso: {produto.pesoPro}");
+            }
+
+            Console.WriteLine("\n Digite uma tecla para voltar ao menu principal");
+            Console.ReadKey();
+            Console.Clear();
+
+            Cabecalho variavelCabecalho = new Cabecalho();
+            variavelCabecalho.CabecalhoRoupaBox();
+
+            Produtos varPro = new Produtos();
+            ExibirMenu variavelMenu = new ExibirMenu();
+
+        }
+
     }
 }

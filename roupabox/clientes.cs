@@ -26,12 +26,6 @@ namespace roupabox
             Console.Clear();
             Console.WriteLine("\n Digite o CPF do cliente:  (com apenas 11 caracteres)");
             string cpfCli = Console.ReadLine();
-
-            //while (cpfCli.Length != 11 || !cpfCli.All(char.IsDigit))//todos os caracteres tem que ser numeros - all(char.isdigit)
-            //{
-            //    Console.WriteLine("cpf invalido, faz de novo");
-            //    cpfCli = Console.ReadLine();
-            //}
             while (string.IsNullOrEmpty(cpfCli) || cpfCli.Length != 11 || !cpfCli.All(char.IsDigit))
             {
                 Console.WriteLine("Escreva o seu cpf    ಥ_ಥ");
@@ -42,11 +36,13 @@ namespace roupabox
 
             Console.WriteLine("\nDigite o telefone do Cliente:  ");
             string telCli = Console.ReadLine();
+            
+            while (telCli.Length != 11 || !telCli.All(char.IsDigit))
+            {
+                Console.WriteLine("digite novamente o telefone (¬_¬ )");
+                telCli = Console.ReadLine();
+            }
             Cliente.telCli = telCli;
-            //while (telCli.lenght != 11 || !telCli.All(char.IsDigit))
-            //{
-            //    Console.WriteLine("deu certo");
-            //}
 
             Console.WriteLine("\n Digite a sua idade:  ");
             int idadeCli = int.Parse(Console.ReadLine());
@@ -99,10 +95,7 @@ namespace roupabox
             listaClientes.Add(Cliente);
 
             Console.WriteLine("\n Cliente cadastrado com sucesso");
-            foreach (var Clientes in listaClientes)
-            {
-                Console.WriteLine($"Nome: {Cliente.nomeCli}, " + $"cpf: {Cliente.cpfCli}");
-            }
+            
             Console.WriteLine("\n Digite uma tecla para voltar ao menu principal ");
             Console.ReadKey();
             ///o readkey quando não clicar nada vai ficar naquela tecla 
@@ -118,6 +111,26 @@ namespace roupabox
             return Cliente;
 
 
+        }
+
+        public void listarCliente()
+        {
+            Console.Clear ();
+            Console.WriteLine("Listar Clientes Cadastrados");
+
+            foreach (var Clientes in listaClientes)
+            {
+                Console.WriteLine($"Nome: {Clientes.nomeCli}, " + $"cpf: {Clientes.cpfCli}");
+            }
+            Console.WriteLine("\n Digite uma tecla para voltar ao menu principal ");
+            Console.ReadKey();
+            Console.Clear();
+
+            Cabecalho variavelCabecalho = new Cabecalho();  
+            variavelCabecalho.CabecalhoRoupaBox();
+
+            Clientes varCli = new Clientes();
+            ExibirMenu variavelMenu = new ExibirMenu();
         }
     }
 }

@@ -50,16 +50,14 @@ namespace roupabox
                             varCli.cadCliente();
                             break;
                         case 2:
-                            //listarclientes variavellistarclientes = new listarclientes();
-                            //variavellistarclientes.ListarClientesRoupaBox();
+                            varCli.listarCliente();
                             break;
                         case 3:
 
                             varPro.cadProduto();
                             break;
                         case 4:
-                            //listarprodutos variavellistarodutos = new listarprodutos();
-                            //variavellistarprodutos.ListarProdutosRoupaBox();
+                            varPro.listarProduto();
                             break;
 
                     }
