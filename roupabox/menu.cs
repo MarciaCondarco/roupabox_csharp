@@ -10,7 +10,7 @@ namespace roupabox
     internal class ExibirMenu
     {
 
-        public void Menu(Produtos varPro, Clientes varCli)//o (produtos varpro ) são o parametro
+        public async void Menu(Produtos varPro, Clientes varCli)//o (produtos varpro ) são o parametro
         {
             List<ProdutoCad> listaP = new List<ProdutoCad>();
             while (true)
@@ -23,6 +23,7 @@ namespace roupabox
                 Console.WriteLine("Digite 2 Listar Cliente");
                 Console.WriteLine("Digite 3 Cadastro de Produtos");
                 Console.WriteLine("Digite 4 Listar Produto\n");
+                Console.WriteLine("Digite 5 para alistar a API");
                 Console.WriteLine("Digite a opção escolhida");
                 int NumeroEscolhido = int.Parse(Console.ReadLine());
 
@@ -58,6 +59,9 @@ namespace roupabox
                             break;
                         case 4:
                             varPro.listarProduto();
+                            break;
+                        case 5:
+                            await API();
                             break;
 
                     }
